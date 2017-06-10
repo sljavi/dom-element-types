@@ -259,6 +259,3 @@ console.log(getAllElementTypes());
 */
 ```
 [Check out the full map](https://github.com/sljavi/dom-element-types/blob/master/src/element-types.js)
-
-## TODO
-* Tests are coming
