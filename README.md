@@ -21,7 +21,7 @@ isTextInput(passwordFieldElement); //true
 
 DOM elements could be classified by its purpose using the following functions.
 
-### Example
+Example
 
 ```javascript
 import { isTextInput } from 'dom-element-types';
@@ -122,7 +122,7 @@ Matches `input[type=week]` element
 
 ## Visibility queries
 
-The following functions are usefull to get all the visible dom elements present in the screen (port view).
+The following functions are useful to get all the visible DOM elements present in the screen (port view).
 
 
 ### Example
@@ -133,16 +133,16 @@ import {
   isVisible
 } from 'dom-element-types';
 
-const visibleButtons = document.getVisibleElementsInViewPort('button');
+const visibleButtons = getVisibleElementsInViewPort('button');
 isVisible(visibleButtons[0]); // true
 ```
 
 ### Functions
 
 #### isVisible
-The function `isVisible` expects as a paramter a DOM element.
+The function `isVisible` expects as a parameter a DOM element.
 It will check if the element:
- * is rendered inside the screeen area
+ * is rendered inside the screen area
  * is not transparent (opacity > 0)
  * is visible (visibility !== 'hidden')
 
@@ -182,4 +182,4 @@ console.log(getAllElementTypes());
 ```
 
 ## TODO
-* Tests are comming
+* Tests are coming
