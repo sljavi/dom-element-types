@@ -1,6 +1,6 @@
 {
   "name": "dom-element-types",
-  "description": "JavaScript library for the browser that provides dom element validations",
+  "description": "JavaScript library for the browser that provides DOM element validations",
   "version": "1.0.0",
   "license": "MIT",
   "options": {
@@ -25,7 +25,6 @@
     "chai": "3.x.x",
     "eslint": "1.7.x",
     "eslint-plugin-babel": "2.x.x",
-    "its-set": "^1.1.5",
     "mocha": "2.x.x",
     "nodemon": "1.7.x"
   },
@@ -40,8 +39,6 @@
   },
   "dependencies": {
     "babel-runtime": "6.x.x",
-    "clj-fuzzy": "^0.3.2",
-    "its-set": "^1.1.5",
     "lodash": "^4.17.4"
   }
 }
