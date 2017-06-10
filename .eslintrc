@@ -4,7 +4,9 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "mocha": true,
+    "jasmine": true
   },
 
   "ecmaFeatures": {
@@ -133,8 +135,8 @@
     "no-script-url": [2],
     "no-self-compare": [0],
     "no-sequences": [2],
-    "no-shadow": [2],
-    "no-shadow-restricted-names": [2],
+    "no-shadow": [0],
+    "no-shadow-restricted-names": [0],
     "no-spaced-func": [2],
     "no-sparse-arrays": [2],
     "no-sync": [0],

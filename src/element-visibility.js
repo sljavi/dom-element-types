@@ -1,10 +1,12 @@
+import _ from 'lodash';
+
 function isRectInViewport(rect) {
-  return [
+  return _.every([
     rect.bottom > 0,
     rect.right > 0,
     rect.left < (window.innerWidth || document.documentElement.clientWidth),
     rect.top < (window.innerHeight || document.documentElement.clientHeight)
-  ].every();
+  ]);
 }
 
 function isElementAriaDisabled(el) {

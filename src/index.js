@@ -80,16 +80,11 @@ export function isVisible(el) {
 }
 
 export function getVisibleElementsInViewPort(selectors = '*') {
-  return document
-    .querySelectorAll(selectors)
-    .filter(isVisible);
+  return _.filter(document.querySelectorAll(selectors), isVisible);
 }
 
 export function getVisibleElementsInViewPortExpandedData(selectors = '*') {
-  return document
-    .querySelectorAll(selectors)
-    .map(checkElementVisibility)
-    .filter(data => data);
+  return _.compact(_.map(document.querySelectorAll(selectors), checkElementVisibility));
 }
 
 export function getAllElementTypes() {
