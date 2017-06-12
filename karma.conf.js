@@ -3,6 +3,29 @@
 // https://cafedev.org/article/2016/12/testing-with-wepack-2-inject-loader-karma-mocha-chai-and-sinon/
 
 module.exports = function(config) {
+  const reporters = ['nyan', 'coverage'];
+  const coverageReporters = [{
+    type: 'text-summary'
+  }];
+  let browsers = ['Chrome'];
+
+  if (process.env.TRAVIS) {
+    console.log('On Travis sending coveralls');
+    coverageReporters.push({
+      type: 'lcov',
+      dir: 'coverage'
+    });
+    reporters.push('coveralls');
+    browsers = ['Chrome_travis_ci'];
+  } else {
+    console.log('Not on Travis so not sending coveralls');
+    coverageReporters.push({
+      type: 'html',
+      dir: 'coverage',
+      subdir: '.'
+    });
+  }
+
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -40,10 +63,9 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['nyan', 'coverage', 'coveralls'],
+    reporters: reporters,
     coverageReporter: {
-      type: 'lcov', // lcov or lcovonly are required for generating lcov.info files
-      dir: 'coverage/'
+      reporters: coverageReporters
     },
 
     // web server port
@@ -65,7 +87,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [process.env.TRAVIS ? 'Chrome_travis_ci' : 'Chrome'],
+    browsers: browsers,
     customLaunchers: {
       Chrome_travis_ci: {
         base: 'Chrome',
