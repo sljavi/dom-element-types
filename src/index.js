@@ -8,9 +8,6 @@ import { checkElementVisibility } from './element-visibility';
 
 function is(selectors, el) {
   return _.some(selectors, selector => {
-    if (_.isArray(selector)) {
-      return is(selector, el);
-    }
     return el.matches(selector);
   });
 }
