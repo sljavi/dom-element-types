@@ -12,6 +12,7 @@
   "devDependencies": {
     "babel-core": "6.x.x",
     "babel-eslint": "4.x.x",
+    "babel-istanbul-loader": "^0.1.0",
     "babel-loader": "^7.0.0",
     "babel-polyfill": "6.x.x",
     "babel-preset-es2015": "6.x.x",

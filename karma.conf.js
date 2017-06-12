@@ -52,9 +52,26 @@ module.exports = function(config) {
       'tests/**/*.js': ['webpack']
     },
     // webpack configuration
-    webpack: require('./webpack.config.js'),
+    webpack: {
+      module: {
+        rules: [{
+          test: /\.js$/,
+          use: 'babel-loader',
+          exclude: /(\/node_modules\/|test\.js|\.spec\.js$)/
+        },
+        {
+          test: /\.js?$/,
+          include: /src/,
+          exclude: /(node_modules|bower_components|spec)/,
+          loader: 'babel-istanbul-loader',
+          query: {
+            cacheDirectory: true
+          }
+        }
+      ]}
+    },
     webpackMiddleware: {
-        stats: 'errors-only'
+      stats: 'errors-only'
     },
 
     // test results reporter to use
