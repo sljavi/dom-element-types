@@ -3,9 +3,13 @@
 // https://cafedev.org/article/2016/12/testing-with-wepack-2-inject-loader-karma-mocha-chai-and-sinon/
 
 module.exports = function(config) {
-  const reporters = ['nyan', 'coverage'];
+  let reporters = ['nyan', 'coverage'];
   const coverageReporters = [{
     type: 'text-summary'
+  }, {
+    type: 'html',
+    dir: 'coverage',
+    subdir: '.'
   }];
   let browsers = ['Chrome'];
 
@@ -15,15 +19,8 @@ module.exports = function(config) {
       type: 'lcov',
       dir: 'coverage'
     });
-    reporters.push('coveralls');
+    reporters = ['mocha', 'coverage', 'coveralls'];
     browsers = ['Chrome_travis_ci'];
-  } else {
-    console.log('Not on Travis so not sending coveralls');
-    coverageReporters.push({
-      type: 'html',
-      dir: 'coverage',
-      subdir: '.'
-    });
   }
 
   config.set({
