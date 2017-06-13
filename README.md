@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sljavi/dom-element-types.svg?branch=master)](https://travis-ci.org/sljavi/dom-element-types) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6759438331b94413b9a741fbd2c9a01d)](https://www.codacy.com/app/javi-pzv/dom-element-types?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sljavi/dom-element-types&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/sljavi/dom-element-types.svg?branch=master)](https://travis-ci.org/sljavi/dom-element-types) [![Build Status](https://travis-ci.org/sljavi/dom-element-types.svg?branch=master)](https://travis-ci.org/sljavi/dom-element-types) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6759438331b94413b9a741fbd2c9a01d)](https://www.codacy.com/app/javi-pzv/dom-element-types?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sljavi/dom-element-types&amp;utm_campaign=Badge_Grade)
 
 # DOM element types
 
