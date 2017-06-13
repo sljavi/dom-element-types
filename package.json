@@ -1,7 +1,7 @@
 {
   "name": "dom-element-types",
   "description": "JavaScript library for the browser that provides DOM element validations",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src ./tests",
