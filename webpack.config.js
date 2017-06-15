@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -19,7 +18,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'index.js',
-        pathinfo: true
+        pathinfo: true,
+        library: 'commonjs2'
     },
 
     resolve: {
