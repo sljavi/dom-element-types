@@ -32,6 +32,8 @@
     "mocha": "^3.4.2",
     "webpack": "^2.6.1"
   },
+  "main": "dist/index.js",
+  "module": "src/index.js",
   "author": "Javier Perez",
   "bugs": {
     "url": "https://github.com/sljavi/dom-element-types/issues"
