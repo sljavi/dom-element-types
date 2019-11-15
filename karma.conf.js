@@ -20,7 +20,7 @@ module.exports = function(config) {
       dir: 'coverage'
     });
     reporters = ['mocha', 'coverage', 'coveralls'];
-    browsers = ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'];
+    browsers = ['ChromeHeadlessNoSandbox'];
   }
 
   config.set({
