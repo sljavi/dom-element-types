@@ -11,7 +11,7 @@ module.exports = function(config) {
     dir: 'coverage',
     subdir: '.'
   }];
-  let browsers = ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'];
+  let browsers = ['Chrome'],
 
   if (process.env.TRAVIS) {
     console.log('On Travis sending coveralls');
@@ -20,7 +20,7 @@ module.exports = function(config) {
       dir: 'coverage'
     });
     reporters = ['mocha', 'coverage', 'coveralls'];
-    browsers = ['Chrome_travis_ci'];
+    browsers = ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'];
   }
 
   config.set({
