@@ -17,7 +17,8 @@ import {
   isVisible,
   getVisibleElementsInViewPort,
   getVisibleElementsInViewPortExpandedData,
-  getAllElementTypes } from './../src/index';
+  getAllElementTypes
+} from '../src/index';
 
 const img = document.createElement('img');
 const p = document.createElement('p');
@@ -220,11 +221,11 @@ describe('getVisibleElementsInViewPortExpandedData', () => {
 
 describe('getAllElementTypes', () => {
   it('should returns element types', () => {
-
     const elementTypes = getAllElementTypes();
-    expect(elementTypes).to.have.all.keys('audio', 'button', 'checkbox',
-    'color', 'datePicker', 'file', 'image', 'link', 'media', 'range',
-    'radio', 'select', 'text', 'textInput', 'video', 'hasOnClickAttr');
+    expect(elementTypes).to.have.all.keys(
+      'audio', 'button', 'checkbox',
+      'color', 'datePicker', 'file', 'image', 'link', 'media', 'range',
+      'radio', 'select', 'text', 'textInput', 'video', 'hasOnClickAttr'
+    );
   });
 });
-

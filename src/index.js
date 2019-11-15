@@ -7,9 +7,7 @@ import {
 import { checkElementVisibility } from './element-visibility';
 
 function is(selectors, el) {
-  return _.some(selectors, selector => {
-    return el.matches(selector);
-  });
+  return _.some(selectors, (selector) => el.matches(selector));
 }
 
 export function isImage(el) {
