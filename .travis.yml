@@ -6,7 +6,7 @@ addons:
   chrome: stable
 
 script:
-  - yarn lint
-  - yarn test
-  - yarn build
-  - yarn profile
+  - npm run lint
+  - npm run test
+  - npm run build
+  - npm run profile
