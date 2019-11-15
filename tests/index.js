@@ -17,7 +17,8 @@ import {
   isVisible,
   getVisibleElementsInViewPort,
   getVisibleElementsInViewPortExpandedData,
-  getAllElementTypes } from './../src/index';
+  getAllElementTypes,
+  isScrollable } from './../src/index';
 
 const img = document.createElement('img');
 const p = document.createElement('p');
@@ -225,6 +226,31 @@ describe('getAllElementTypes', () => {
     expect(elementTypes).to.have.all.keys('audio', 'button', 'checkbox',
     'color', 'datePicker', 'file', 'image', 'link', 'media', 'range',
     'radio', 'select', 'text', 'textInput', 'video', 'hasOnClickAttr');
+  });
+});
+
+describe('isScrollable', () => {
+  let container;
+
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(container);
+  });
+
+  it('should return false if element is not scrollable', () => {
+    expect(isScrollable(container)).to.be.false; // eslint-disable-line no-unused-expressions
+  });
+
+  it('should return true if element is scrollable', () => {
+    container.style = 'overflow-y:scroll;height:400px';
+    let containerElement = document.createElement('div');
+    containerElement.style = 'height:800px';
+    container.appendChild(containerElement);
+    expect(isScrollable(container)).to.be.true; // eslint-disable-line no-unused-expressions
   });
 });
 

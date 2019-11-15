@@ -5,11 +5,16 @@ import {
   datePickers,
 } from './element-types';
 import { checkElementVisibility } from './element-visibility';
+import { checkScrollable } from './element-scrollable';
 
 function is(selectors, el) {
   return _.some(selectors, selector => {
     return el.matches(selector);
   });
+}
+
+export function isScrollable(el) {
+  return checkScrollable(el);
 }
 
 export function isImage(el) {
