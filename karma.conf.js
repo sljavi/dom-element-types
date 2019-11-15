@@ -11,10 +11,10 @@ module.exports = function(config) {
     dir: 'coverage',
     subdir: '.'
   }];
-  let browsers = ['Chrome'],
+  let browsers = ['Chrome'];
 
   if (process.env.TRAVIS) {
-    console.log('On Travis sending coveralls');
+    console.log('On Travis sending to coveralls');
     coverageReporters.push({
       type: 'lcov',
       dir: 'coverage'
