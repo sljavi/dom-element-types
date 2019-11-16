@@ -221,11 +221,12 @@ describe('getVisibleElementsInViewPortExpandedData', () => {
 
 describe('getAllElementTypes', () => {
   it('should returns element types', () => {
-
     const elementTypes = getAllElementTypes();
-    expect(elementTypes).to.have.all.keys('audio', 'button', 'checkbox',
-    'color', 'datePicker', 'file', 'image', 'link', 'media', 'range',
-    'radio', 'select', 'text', 'textInput', 'video', 'hasOnClickAttr');
+    expect(elementTypes).to.have.all.keys(
+      'audio', 'button', 'checkbox',
+      'color', 'datePicker', 'file', 'image', 'link', 'media', 'range',
+      'radio', 'select', 'text', 'textInput', 'video', 'hasOnClickAttr'
+    );
   });
 });
 
@@ -242,7 +243,7 @@ describe('isScrollable', () => {
   });
 
   it('should return false if element is not scrollable', () => {
-    expect(isScrollable(container)).to.be.false; // eslint-disable-line no-unused-expressions
+    expect(isScrollable(container)).toEqual(false); // eslint-disable-line no-unused-expressions
   });
 
   it('should return true if element is scrollable', () => {
@@ -250,7 +251,7 @@ describe('isScrollable', () => {
     let containerElement = document.createElement('div');
     containerElement.style = 'height:800px';
     container.appendChild(containerElement);
-    expect(isScrollable(container)).to.be.true; // eslint-disable-line no-unused-expressions
+    expect(isScrollable(container)).toEqual(true); // eslint-disable-line no-unused-expressions
   });
 });
 

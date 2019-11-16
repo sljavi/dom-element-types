@@ -1,7 +1,7 @@
 {
   "name": "dom-element-types",
   "description": "JavaScript library for the browser that provides DOM element validations",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src ./tests",
@@ -19,8 +19,10 @@
     "babel-preset-es2015": "6.x.x",
     "babel-preset-stage-2": "6.x.x",
     "chai": "^4.0.2",
-    "eslint": "1.7.x",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "2.x.x",
+    "eslint-plugin-import": "^2.18.2",
     "karma": "^1.7.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.1.1",

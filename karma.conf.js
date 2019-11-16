@@ -14,13 +14,13 @@ module.exports = function(config) {
   let browsers = ['Chrome'];
 
   if (process.env.TRAVIS) {
-    console.log('On Travis sending coveralls');
+    console.log('On Travis sending to coveralls');
     coverageReporters.push({
       type: 'lcov',
       dir: 'coverage'
     });
     reporters = ['mocha', 'coverage', 'coveralls'];
-    browsers = ['Chrome_travis_ci'];
+    browsers = ['ChromeHeadlessNoSandbox'];
   }
 
   config.set({
@@ -101,10 +101,10 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: browsers,
+    browsers,
     customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },

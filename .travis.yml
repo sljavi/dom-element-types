@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-  - "7"
-before_install:
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+  - "12"
+
+addons:
+  chrome: stable
 
 script:
-  - yarn lint
-  - yarn test
-  - yarn build
-  - yarn profile
+  - npm run lint
+  - npm run test
+  - npm run build
+  - npm run profile
