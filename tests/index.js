@@ -18,7 +18,8 @@ import {
   getVisibleElementsInViewPort,
   getVisibleElementsInViewPortExpandedData,
   getAllElementTypes,
-  isScrollable } from './../src/index';
+  isScrollable
+} from '../src/index';
 
 const img = document.createElement('img');
 const p = document.createElement('p');
@@ -243,15 +244,14 @@ describe('isScrollable', () => {
   });
 
   it('should return false if element is not scrollable', () => {
-    expect(isScrollable(container)).toEqual(false); // eslint-disable-line no-unused-expressions
+    expect(isScrollable(container)).to.equal(false); // eslint-disable-line no-unused-expressions
   });
 
   it('should return true if element is scrollable', () => {
     container.style = 'overflow-y:scroll;height:400px';
-    let containerElement = document.createElement('div');
+    const containerElement = document.createElement('div');
     containerElement.style = 'height:800px';
     container.appendChild(containerElement);
-    expect(isScrollable(container)).toEqual(true); // eslint-disable-line no-unused-expressions
+    expect(isScrollable(container)).to.equal(true); // eslint-disable-line no-unused-expressions
   });
 });
-

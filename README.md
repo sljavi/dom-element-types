@@ -260,4 +260,23 @@ console.log(getAllElementTypes());
 }
 */
 ```
+
+#### isScrollable 
+Determines if an element is scrollable by checking if the ```scrollHeight > clientHeight``` and if the computed style is
+configured for scrolling.
+
+```javascript
+import { isScrollable } from 'dom-element-types';
+
+// create a container containing an element that exceeds it's height
+let container = document.createElement('div');
+document.body.appendChild(container);
+container.style = 'overflow-y:scroll;height:400px';
+let containerElement = document.createElement('div');
+containerElement.style = 'height:800px';
+container.appendChild(containerElement);
+
+isScrollable(container); // true
+```
+
 [Check out the full map](https://github.com/sljavi/dom-element-types/blob/master/src/element-types.js)
