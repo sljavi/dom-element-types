@@ -175,6 +175,23 @@ const sameDatePicker = document.querySelector('input[type=week]');
 isWeekPicker(sameDatePicker); //true
 ```
 
+#### isScrollable 
+Determines if an element is scrollable by checking if the ```scrollHeight > clientHeight``` and if the computed style is configured for scrolling i.e., has ```overflowY === scroll``` or ```overflowY === auto```.
+
+```javascript
+import { isScrollable } from 'dom-element-types';
+
+// create a container containing an element that exceeds it's height
+let container = document.createElement('div');
+document.body.appendChild(container);
+container.style = 'overflow-y:scroll;height:400px';
+let containerElement = document.createElement('div');
+containerElement.style = 'height:800px';
+container.appendChild(containerElement);
+
+isScrollable(container); // true
+```
+
 ## Visibility queries
 
 The following functions are useful to get all the visible DOM elements present in the screen (port view).
@@ -260,4 +277,5 @@ console.log(getAllElementTypes());
 }
 */
 ```
+
 [Check out the full map](https://github.com/sljavi/dom-element-types/blob/master/src/element-types.js)
