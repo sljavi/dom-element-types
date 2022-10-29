@@ -23,7 +23,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "2.x.x",
     "eslint-plugin-import": "^2.18.2",
-    "karma": "^1.7.0",
+    "karma": "^6.4.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-coverage": "^1.1.1",
